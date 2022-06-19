@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/equipamentos', [ControllerEquipamento::class, 'listar']);
+Route::get('/equipamentos/inserir', [ControllerEquipamento::class, 'montaTela']);
