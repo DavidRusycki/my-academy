@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ControllerEquipamento;
+use App\Http\Controllers\ControllerConsultaEquipamento;
+use App\Http\Controllers\ControllerManutencaoEquipamento;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/equipamentos', [ControllerEquipamento::class, 'listar']);
-Route::get('/equipamentos/inserir', [ControllerEquipamento::class, 'montaTela']);
+Route::get('/equipamentos', [ControllerConsultaEquipamento::class, 'listar']);
+Route::get('/equipamentos/inserir', [ControllerManutencaoEquipamento::class, 'montaTelaInsercao']);
+Route::get('/equipamentos/alterar/{id}', [ControllerManutencaoEquipamento::class, 'montaTelaAlteracao']);
+Route::post('/equipamentos/alterar/save', [ControllerManutencaoEquipamento::class, 'saveFormUpdate']);
+Route::post('/equipamentos/inserir/save', [ControllerManutencaoEquipamento::class, 'saveFormInsert']);
