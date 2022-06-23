@@ -13,9 +13,12 @@
         
     </head>
     <body class="antialiased">
+        <div class="container">
         <?php if($_SERVER['REQUEST_URI'] != '/') {?>
-            <a href="/" class="btn btn-primary">Página Inicial</a>
+            <a href="/" class="btn btn-primary" style="margin: 5px">Página Inicial</a>
         <?php } ?>
+
         @yield('tabela')
+        </div>
     </body>
 </html>

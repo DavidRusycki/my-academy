@@ -2,7 +2,7 @@
 @section('tabela')
 
 <a href="{{$Model->getRotaInsert()}}" class="btn btn-success">Inserir</a>
-<table class="table table-dark">
+<table class="table table-dark" style="margin-top: 20px;">
     <tr>
         <th scope="col">Código</th>
         <th scope="col">Nome</th>
