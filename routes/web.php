@@ -24,3 +24,4 @@ Route::get('/equipamentos/inserir', [ControllerManutencaoEquipamento::class, 'mo
 Route::get('/equipamentos/alterar/{id}', [ControllerManutencaoEquipamento::class, 'montaTelaAlteracao']);
 Route::post('/equipamentos/alterar/save', [ControllerManutencaoEquipamento::class, 'saveFormUpdate']);
 Route::post('/equipamentos/inserir/save', [ControllerManutencaoEquipamento::class, 'saveFormInsert']);
+Route::get('/equipamentos/deletar/{id}', [ControllerManutencaoEquipamento::class, 'deletar']);

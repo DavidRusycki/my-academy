@@ -16,7 +16,8 @@ abstract class ControllerConsultaBase extends Controller
         $aAll = $oModel->getAllFromModel();
 
         return $oModel->getViewConsulta([
-            $sNomeVariavelRegistros => $aAll
+            $sNomeVariavelRegistros => $aAll,
+            'Model' => $oModel
         ]);
     }
 

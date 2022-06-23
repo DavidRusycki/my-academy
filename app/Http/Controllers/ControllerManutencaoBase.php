@@ -47,9 +47,9 @@ abstract class ControllerManutencaoBase extends Controller
     public function saveFormInsert(Request $request) 
     {
         $oModel = $this->getNewModel();
-        $this->setDados($oModel, $request);
+        $oModel = $this->setDados($oModel, $request);
         $oModel->save();
-        return $oModel->getControllerConsulta()->listar();
+        return redirect($oModel->getRotaConsulta());
     }
 
     /**
@@ -60,9 +60,16 @@ abstract class ControllerManutencaoBase extends Controller
     public function saveFormUpdate(Request $request) 
     {
         $oModel = $this->getNewModel();
-        $this->setDados($oModel, $request);
+        $oModel = $this->setDados($oModel, $request);
         $oModel->update();
-        return $oModel->getControllerConsulta()->listar();
+        return redirect($oModel->getRotaConsulta());
     }
 
+    public function deletar($id) {
+        $oModel = $this->getModelFromId($id);
+
+        $oModel->delete();
+
+        return redirect($oModel->getRotaConsulta());
+    }
 }

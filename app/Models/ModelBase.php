@@ -12,5 +12,10 @@ abstract class ModelBase extends Model
     abstract public function getNomeVariavelRegistros();
     abstract public function getAllFromModel();
     abstract public function getViewConsulta(Array $aParams);
+    abstract public function getRotaConsulta();
+    abstract public function getRotaSaveFormInsert();
+    abstract public function getRotaSaveFormUpdate();
+    abstract public function getRotaDeletar($id);
+    abstract public function getRotaUpdate($id);
 
 }

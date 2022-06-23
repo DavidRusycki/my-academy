@@ -2,20 +2,20 @@
 
 namespace App\Models;
 
-use App\Http\Controllers\ControllerConsultaEquipamento;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Equipamento extends ModelBase
+class Academia extends ModelBase
 {
     use HasFactory;
 
-    protected $table = 'equipamento';
+    
+    protected $table = 'academia';
     protected $primayKey = 'id';
 
     public function getNomeVariavelRegistros()
     {
-        return 'Equipamentos';
+        return 'Academias';
     }
 
     public function getAllFromModel()
@@ -25,19 +25,12 @@ class Equipamento extends ModelBase
 
     public function getRotaConsulta()
     {
-        return '/equipamentos';
+        return '/academias';
     }
 
     public function getRotaSaveFormInsert()
     {
         $sUrl = '/equipamentos/inserir/save/';
-        return $sUrl;
-    }
-
-    public function getRotaUpdate($id) 
-    {
-        $sUrl = '/equipamentos/alterar/' . $id;
-        
         return $sUrl;
     }
 

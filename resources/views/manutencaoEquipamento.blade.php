@@ -3,8 +3,9 @@
 
 <form action="{{$Insert ? $Model->getRotaSaveFormInsert() : $Model->getRotaSaveFormUpdate()}}" method="POST">
 
-    <label for="id">Id</label>
-    <input id="id" name="id" type="number" disabled value='{{$Model->id??null}}'>
+    <label for="id_visivel">Id</label>
+    <input id="id_visivel" name="id_visivel" type="number" disabled value='{{$Model->id??null}}'>
+    <input id="id" name="id" type="number" value='{{$Model->id??null}}' style="display:none">   
     
     <label for="nome">Nome</label>
     <input id="nome" name="nome" type="text" value='{{$Model->nome??null}}'>

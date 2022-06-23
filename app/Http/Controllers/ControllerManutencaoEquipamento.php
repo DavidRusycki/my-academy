@@ -16,6 +16,7 @@ class ControllerManutencaoEquipamento extends ControllerManutencaoBase
     public function getModelFromId(Int $id)
     {
         $oModel = Equipamento::find($id);
+
         return $oModel;
     }
 
@@ -26,9 +27,12 @@ class ControllerManutencaoEquipamento extends ControllerManutencaoBase
 
     public function setDados($oModel, Request $request)
     {
-        $oModel->id = $request->input('id');
+        if ($request->input('id')) {
+            $oModel = Equipamento::find($request->input('id'));
+        }
         $oModel->nome = $request->input('nome');
         $oModel->valor = $request->input('valor');
+        return $oModel;
     }
 
 }
