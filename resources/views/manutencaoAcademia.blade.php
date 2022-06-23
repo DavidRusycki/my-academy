@@ -10,9 +10,9 @@
     <label for="nome">Nome</label>
     <input id="nome" name="nome" type="text" value='{{$Model->nome??null}}'>
     
-    <label for="valor">Valor</label>
-    <input id="valor" name="valor" type="number" value='{{$Model->valor??null}}'>
-
+    <label for="endereco">Endereço</label>
+    <input id="endereco" name="endereco" type="text" value='{{$Model->endereco??null}}'>
+    
     <input type="hidden" name="_token" value="{{ csrf_token() }}" />
 
     <input type="submit" value="Confirmar" name="submit">

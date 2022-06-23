@@ -4,9 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Equipamento;
+use App\Models\Academia;
 
-class EquipamentoSeeder extends Seeder
+class AcademiaSeeder extends Seeder
 {
     /**
      * Run the database seeds.

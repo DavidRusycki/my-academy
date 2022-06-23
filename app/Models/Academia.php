@@ -9,7 +9,6 @@ class Academia extends ModelBase
 {
     use HasFactory;
 
-    
     protected $table = 'academia';
     protected $primayKey = 'id';
 
@@ -30,26 +29,38 @@ class Academia extends ModelBase
 
     public function getRotaSaveFormInsert()
     {
-        $sUrl = '/equipamentos/inserir/save/';
+        $sUrl = '/academias/inserir/save/';
+        return $sUrl;
+    }
+
+    public function getRotaInsert()
+    {
+        $sUrl = '/academias/inserir';
+        return $sUrl;
+    }
+
+    public function getRotaUpdate($id) 
+    {
+        $sUrl = '/academias/alterar/' . $id;
+        
         return $sUrl;
     }
 
     public function getRotaSaveFormUpdate()
     {
-        $sUrl = '/equipamentos/alterar/save/';
+        $sUrl = '/academias/alterar/save/';
         return $sUrl;
     }
 
     public function getRotaDeletar($id)
     {
-        $sUrl = '/equipamentos/deletar/' . $id;
+        $sUrl = '/academias/deletar/' . $id;
 
         return $sUrl;
     }
 
     public function getViewConsulta($aParams = [])
     {
-        return view('ConsultaEquipamento', $aParams);
+        return view('ConsultaAcademia', $aParams);
     }
-
 }

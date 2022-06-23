@@ -34,6 +34,12 @@ class Equipamento extends ModelBase
         return $sUrl;
     }
 
+    public function getRotaInsert()
+    {
+        $sUrl = '/equipamentos/inserir';
+        return $sUrl;
+    }
+
     public function getRotaUpdate($id) 
     {
         $sUrl = '/equipamentos/alterar/' . $id;
