@@ -19,11 +19,4 @@ abstract class ModelBase extends Model
     abstract public function getRotaUpdate($id);
     abstract public function getRotaInsert();
 
-    private function getRotaConsultaEquipamento() 
-    {
-        $sUrl = '/equipamentos';
-
-        return $sUrl;
-    }
-
 }
