@@ -2,36 +2,37 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Academia;
+use App\Models\Pessoa;
 use Illuminate\Http\Request;
 
-class ControllerManutencaoAcademia extends ControllerManutencaoBase
+class ControllerManutencaoPessoa extends ControllerManutencaoBase
 {
 
     public function getNomeClasse()
     {
-        return 'Academia';
+        return 'Pessoa';
     }
 
     public function getModelFromId(Int $id)
     {
-        $oModel = Academia::find($id);
+        $oModel = Pessoa::find($id);
 
         return $oModel;
     }
 
-    public function getNewModel() : Academia
+    public function getNewModel() : Pessoa
     {
-        return new Academia;
+        return new Pessoa();
     }
 
     public function setDados($oModel, Request $request)
     {
         if ($request->input('id')) {
-            $oModel = Academia::find($request->input('id'));
+            $oModel = Pessoa::find($request->input('id'));
         }
         $oModel->nome = $request->input('nome');
-        $oModel->endereco = $request->input('endereco');
+        $oModel->idade = $request->input('idade');
+        $oModel->sexo = $request->input('sexo');
         return $oModel;
     }
     
